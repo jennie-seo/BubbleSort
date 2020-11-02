@@ -1,10 +1,11 @@
 /*
- * Programmer:
- * Date:
- * Purpose:
+ * Programmer: Jennie Seo
+ * Date: Novemeber 2, 2020
+ * Purpose: Bubble sort any numbers
  */
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class BubbleSort {
     public static void main (String [] args) {
@@ -23,8 +24,26 @@ public class BubbleSort {
         }
 
         // TODO: Sort the array using Bubble Sort
-        
-
+        boolean swapped; 
+        for (int i = 0; i < size - 1; i++) {	
+        	System.err.println("Before Pass " + (i + 1) + ":");
+        	System.out.println(Arrays.toString(numbers));
+        	swapped = false;
+        	for (int j = 0; j < size - i - 1; j++){
+        		if (numbers[j] > numbers[j + 1]) {
+        			int temp = numbers[j];
+        			numbers[j] = numbers[j + 1];
+        			numbers[j + 1] = temp;
+        			swapped = true;
+        		}
+        	
+        	}
+        	if (swapped == false)
+        	break;
+        }	
+  
+   
+        	
         // Print out the sorted array
         System.err.println("Sorted Array:");
         System.out.println(Arrays.toString(numbers));
