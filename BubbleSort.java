@@ -1,6 +1,6 @@
 /*
  * Programmer: Jennie Seo
- * Date: Novemeber 2, 2020
+ * Date: Novemeber 3, 2020
  * Purpose: Bubble sort any numbers
  */
 
@@ -22,8 +22,8 @@ public class BubbleSort {
         for (int index = 0; index < size; index++) {
             numbers[index] = input.nextInt();
         }
-
-        // TODO: Sort the array using Bubble Sort
+        
+        // Sort the numbers using bubble sort
         boolean swapped; 
         for (int i = 0; i < size - 1; i++) {	
         	System.err.println("Before Pass " + (i + 1) + ":");
@@ -36,14 +36,11 @@ public class BubbleSort {
         			numbers[j + 1] = temp;
         			swapped = true;
         		}
-        	
         	}
         	if (swapped == false)
         	break;
         }	
   
-   
-        	
         // Print out the sorted array
         System.err.println("Sorted Array:");
         System.out.println(Arrays.toString(numbers));
